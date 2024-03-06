@@ -99,7 +99,7 @@ export class GblCdkStack extends Stack {
             commands: [
               "git clone https://github.com/TNRIS/go-bulk-downloader.git",
               "cd go-bulk-downloader/",
-              "fyne-cross windows",
+              "fyne-cross windows --app-id go.go_bulk_downloader",
               "fyne-cross linux",
               "ls"
             ],
