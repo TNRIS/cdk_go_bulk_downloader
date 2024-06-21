@@ -83,7 +83,7 @@ export class GblCdkStack extends Stack {
           phases: {
           install: {
             'runtime-versions': {
-            golang: 1.18
+            golang: "1.x"
           }, commands: [
               "docker --version",
               "go install github.com/fyne-io/fyne-cross@latest",
