@@ -99,8 +99,10 @@ export class GblCdkStack extends Stack {
             commands: [
               "git clone https://github.com/TNRIS/go-bulk-downloader.git",
               "cd go-bulk-downloader/",
-              "fyne-cross windows --app-id go.go_bulk_downloader",
-              "fyne-cross linux",
+              "fyne-cross windows --app-id go.go_bulk_downloader -icon icon.png",
+              "fyne-cross linux -icon icon.png",
+              "cp fyne-cross/dist/windows-amd64/go-bulk-downloader.exe.zip fyne-cross/dist/windows-amd64/go-bulk-downloader-windows-$(cat VERSION).zip",
+              "cp fyne-cross/dist/linux-amd64/go-bulk-downloader.tar.xz fyne-cross/dist/linux-amd64/go-bulk-downloader-gnulinux-$(cat VERSION).tar.xz",
               "ls"
             ],
           }
@@ -108,7 +110,9 @@ export class GblCdkStack extends Stack {
           artifacts: {
             files: [
               "windows-amd64/go-bulk-downloader.exe.zip",
-              "linux-amd64/go-bulk-downloader.tar.xz"
+              "windows-amd64/go-bulk-downloader-windows-$(cat VERSION).zip",
+              "linux-amd64/go-bulk-downloader.tar.xz",
+              "linux-amd64/go-bulk-downloader-gnulinux-$(cat VERSION).tar.xz",
             ],
             "discard-paths": "yes",
             "base-directory": "go-bulk-downloader/fyne-cross/dist/"
