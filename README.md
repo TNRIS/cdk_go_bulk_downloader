@@ -1,3 +1,5 @@
+Archived, no longer maintained here
+
 # Welcome to the TNRIS Bulk Downloader CDK TypeScript project
 
 This is a project for CDK development with TypeScript.
